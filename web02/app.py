@@ -20,15 +20,10 @@ def search(gender):
     return render_template('search.html', all_service = all_service)
 
 @app.route('/customer')
-def customer(gender):
-    all_customer = Customer.objects()
+def customer():
+    all_customer = Customer.objects(gender=1) [:10]
     return render_template('customer.html', all_customer = all_customer)
 
-
-@app.route('/customermale')
-def customer_male():
-    ten_first_cus = Customer.objects(gender=1), limit(10)
-    return render_template('customer.html', all_customer=ten_first_cus)
 
 if __name__ == '__main__':
   app.run(debug=True)
