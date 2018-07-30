@@ -11,14 +11,12 @@
 <body>
     <h1>Customers information</h1>
     {% for customer in all_customer %}
-        {% if customer.gender == 1 %}
-            <b>Name : {{customer.name}}</b>
-            <p>Gender : {{customer.gender}}</p>
-            <p>Phone : {{customer.phone}}</p>
-            <p>Email : {{customer.email}}</p>
-            <p>Job : {{customer.job}}</p>
-            <hr>
-        {% endif %}
+        <b>Name : {{customer.name}}</b>
+        <p>Gender : {{customer.gender}}</p>
+        <p>Phone : {{customer.phone}}</p>
+        <p>Email : {{customer.email}}</p>
+        <p>Job : {{customer.job}}</p>
+        <hr>
     {%endfor%}
 </body>
 </html>

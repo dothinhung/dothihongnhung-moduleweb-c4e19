@@ -21,8 +21,13 @@ def search(gender):
 
 @app.route('/customer')
 def customer():
-    all_customer = Customer.objects(gender=1) [:10]
+    all_customer = Customer.objects()
     return render_template('customer.html', all_customer = all_customer)
+
+@app.route('/customermale')
+def customermale():
+    ten_customer = Customer.objects(gender=1) [:10]
+    return render_template('customer.html', all_customer = ten_customer)
 
 
 if __name__ == '__main__':
