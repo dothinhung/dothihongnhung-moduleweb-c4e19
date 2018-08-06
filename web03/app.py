@@ -66,37 +66,23 @@ def delete(service_id):
     else:
         return "Not found"
 
-@app.route('/update_service/<service_id>', methods=["GET", "POST"])
+@app.route('/update/<service_id>', methods=["GET", "POST"])
 def update(service_id):
     service = Service.objects.with_id(service_id)
-    all_service = Service.objects()
     if service is not None:
         if request.method == "GET":
-            return render_template('update_service.html', all_service=all_service)
+            return render_template("update_service.html", service= service)
         elif request.method == "POST":
-            form = request.form
-            name=form['name'],
-            yob=form['yob'],
-            gender=form['gender'],
-            height=form['height'],
-            phone=form['phone'],
-            address=form['address'],
-            status=form['status']
-
-            Service.update(
-                set__name= name,
-                set__yob=yob,
-                set__gender=gender,
-                set__height=height,
-                set__phone= phone,
-                set__address = address,
-                set__status = status
-            )
-            service.reload()
-            
+            service.update(set__name= request.form['name'],
+            set__yob= request.form['yob'],
+            set__phone= request.form['phone'],
+            set__height= request.form['height'],
+            set__address= request.form['address'],
+        )
         return redirect(url_for('admin'))
     else:
-        return "Not Found"
+        return "Not found"
+
 
 @app.route('/search')
 def search():
@@ -107,12 +93,13 @@ def search():
 @app.route('/detail/<service_id>')
 def detail(service_id):
     service = Service.objects.with_id(service_id)
-    all_service = Service.objects()
     if service is not None:
-        return render_template('detail.html', all_service = all_service)
+        return render_template('detail.html', service = service)
     else:
         return "Not found"
 
+
 if __name__ == '__main__':
-  app.run(debug=True)
+    app.run(debug=True)
+ 
  
