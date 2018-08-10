@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Order Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1>Order Page</h1>
+    <h2>Danh sách yêu cầu</h2>
+
+    <table border="1px">
+        <thead>
+            <th>STT</th>
+            <th>Đối tác</th>
+            <th>Người dùng</th>
+            <th>Thời gian yêu cầu</th>
+        </thead>
+        <tbody>
+            {% for order in all_order %}
+                <tr>
+                    <td>{{loop.index}}</td>
+                    <td>{{order.service_id.name}}</td>
+                    <td>{{order.order_id.username}}</td>
+                    <td>{{order.time}}</td>
+                    <td>
+                        <th>
+                            <a href="{{}}">Phê duyệt yêu cầu</a>
+                        </th>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

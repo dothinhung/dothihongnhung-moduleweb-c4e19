@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CMS APP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1>CMS APP</h1>
+    <a href="{{url_for('login')}}">Login</a>
+    <br>
+    <br>
+    {% for video in videos %}
+    <div>
+        <a href="{{video.link}}" target="_blank">
+            <img src="{{video.thumbnail}}" alt="" width="200" height="200">
+        </a>
+            <p>{{video.title}}</p>
+            <p>Views : {{video.views}}</p>
+            <a href="{{url_for('detail', youtube_id= video.youtube_id)}}" target="_blank">View</a>
+    </div>
+        <br><br>
+    {% endfor %}
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Admin Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1>Admin Page</h1>
+    <a href="{{order_page}}">Xem các yêu cầu dịch vụ</a>
+    <br>
+    <a href="{{('sign_out')}}">Logout</a>
+    <br>
+    <br>
+    <table border="1px">
+        <thead>
+            <th>No</th>
+            <th>Name</th>
+            <th>YOB</th>
+            <th>Gender</th>
+            <th>Height</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>Status</th>
+            <th>Note</th>
+        </thead>
+        <tbody>
+            {% for service in all_service %}
+                <tr>
+                    <td>{{loop.index}}</td>
+                    <td>{{service.name}}</td>
+                    <td>{{service.yob}}</td>
+                    <td>{{"Nữ" if service.gender == 0 else "Nam"}}</td>
+                    <td>{{service.height}}</td>
+                    <td>{{service.phone}}</td>
+                    <td>{{service.address}}</td>
+                    <td>{{"Bận" if service.status == True else "Rảnh"}}</td>
+                    <th>
+                        <a href="{{url_for('update', service_id=service.id)}}" target="_blank">Update</a>
+                        <a href="{{url_for('delete', service_id=service.id)}}">Delete</a>
+                    </th>
+                </tr>
+            {% endfor %}
+            </tbody>
+    </table>
+</body>
+</html>

@@ -93,6 +93,7 @@ def search():
 @app.route('/detail/<service_id>')
 def detail(service_id):
     service = Service.objects.with_id(service_id)
+    # đây là id của document
     if service is not None:
         return render_template('detail.html', service = service)
     else:
