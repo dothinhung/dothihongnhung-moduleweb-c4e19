@@ -208,26 +208,12 @@ def order(service_id):
     return "Đã gửi yêu cầu"
 
 #########################
-@app.route('/order-page')
-def order_page():
+@app.route('/order-view')
+def order_view():
     all_order = Order.objects()
-    return render_template('order.html', all_order = all_order)
-
+    return render_template('order.html', all_order=all_order)
 
 ########################
-@app.route('/is-accepted/<order_id>')
-def is_accepted(order_id):
-    if 'admin' in session:
-        order = Order.objects.with_id(order_id)
-        order.update (set__is_accepted = True )
-        order.reload()
-        gmail = GMail ('<nhung11296@gmail.com>', 'nambatcohoi')
-        html_content = "Yêu cầu của bạn đã được xử lí. Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất. Cảm ơn đã sử dụng dịch vụ."
-        msg = Message ('Warm Winter', to = order.user_id.email, html = html_content)
-        gmail.send(msg)
-        return redirect (url_for('order_page'))
-    else:
-        return redirect (url_for ('index'))
 
 if __name__ == '__main__':
   app.run(debug=True)
