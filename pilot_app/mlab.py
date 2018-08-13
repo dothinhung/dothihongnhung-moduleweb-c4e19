@@ -6,7 +6,7 @@ import mongoengine
 host = "ds215502.mlab.com"
 port = 15502
 db_name = "muadongkhonglanh"
-user_name = "admin0"
+user_name = "admin2"
 password = "adminc4e19"
 
 

@@ -1,0 +1,46 @@
+.text-success{
+    color: green;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.bg-green{
+    background-color: lightgreen;
+}
+
+.w-200px{
+    width: 300px;
+}
+
+.h-200px{
+    height: 300px;
+}
+
+.bg-blue{
+    background-color: darkblue;
+}
+
+.d-inline-block{
+    display: inline-block;
+}
+
+.w-50{
+    width: 50%;
+}
+
+#box-model{
+    /* width style color */
+    border: 1px solid red;
+    margin: 40px;
+    /* padding: 10px 20px 30px 40px */
+    
+}
+
+.iner-div{
+    width: 20%;
+    height: 20%;
+    background-color: brown;
+    padding: 10px 40px;
+}

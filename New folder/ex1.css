@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #ffff;
+    color: #555;
+    font-family: "Lato", "Arial", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    background-image: url(tianshu-liu-395929-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.container div {
+    text-align: center;
+    color:#fff;
+    font-weight: 700;
+}
+
+.headertext {
+    text-align: center;
+    color:#fff;
+    font-weight: 700;
+    margin-top : 5%;
+    margin-bottom: 1%;
+    padding-top: 1%;
+}
+
+.textbox {
+    border-top: 1px solid grey;
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 10px
+}
+
+img {
+    height: 50%;
+    width: 50%;
+    border-radius: 50%;
+    margin-bottom: 10px
+}

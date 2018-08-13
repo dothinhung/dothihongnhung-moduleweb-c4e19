@@ -166,7 +166,7 @@ def sign_in():
         )
 
         new_user.save()
-        return "Welcome to Warm Winter Page"
+        return redirect(url_for('another_search'))
 
 
 #######################
@@ -187,6 +187,8 @@ def login():
             return redirect (url_for('another_search'))
         else:
             return "Sai username hoặc password"
+
+            ## thêm service_id và user_id
 
 #########################
 @app.route('/logout')
@@ -213,7 +215,7 @@ def order_view():
     all_order = Order.objects()
     return render_template('order.html', all_order=all_order)
 
-########################
+#########################
 
 if __name__ == '__main__':
   app.run(debug=True)
