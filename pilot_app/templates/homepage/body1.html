@@ -1,0 +1,26 @@
+<div class="bg-white">
+  <div class="d-none d-md-block my-5 d-flex justify-content-center">
+    <h4 class="d-flex justify-content-center">Chào mừng các bạn đã đến với Mùa Đông Không Lạnh</h5>
+      <br>
+    <p class="font-lobster d-flex justify-content-center">"Chúng tôi ở đây là để giúp bạn có mối quan hệ tốt đẹp với gia đình người thân trong khi vẫn giữ được sự tự do và riêng tư, cũng như quyết định của bản thân bản"</p>
+  </div>
+
+  <div class="card-deck mx-5 my-5">
+      <div class="card">
+        <a href="{{url_for('search', gender = 1)}}">
+          <img class="card-img-top" src="../../static/image/female.jpg  " alt="Card image cap">
+        </a>
+        <div class="carousel-caption d-none d-md-block">
+            <h3 class="text-white font-owsald font-weight-bold">Bạn là Nam</h3>
+        </div>
+      </div>
+      <div class="card">
+        <a href="{{url_for('search', gender = 0)}}">
+          <img class="card-img-top" src="../../static/image/male.jpg" alt="Card image cap">
+        </a>
+          <div class="carousel-caption d-none d-md-block">
+              <h3 class="text-white font-owsald font-weight-bold">Bạn là Nữ</h3>
+          </div>
+        </div>
+  </div>
+</div>

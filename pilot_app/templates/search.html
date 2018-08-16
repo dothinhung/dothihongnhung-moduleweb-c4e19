@@ -4,12 +4,10 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Search Page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    {% include 'meta-data.html' %}
 </head>
 <body>
-    <h1>Search Page</h1>
+    <!-- <h1>Search Page</h1>
     {% for service in all_service %}
         <div>
             {% if service.gender == 0%}
@@ -24,6 +22,11 @@
             <a href="{{url_for('detail', service_id=service.id)}}">Chi tiết</a>
             <hr>
         </div>
-    {%endfor%}
+    {%endfor%} -->
+
+    {% include 'searchpage/navigation.html'%}
+    {% include 'searchpage/carousel.html'%}
+    {% include 'searchpage/search.html'%}
+    {% include 'searchpage/footer.html'%}
 </body>
 </html>

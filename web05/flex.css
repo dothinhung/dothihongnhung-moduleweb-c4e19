@@ -1,24 +1,343 @@
-#flex-box{
-    background-color: gray;
+/* width */
+.w-86{
+    width:86px;
+}
+/* id */
+#upper{
     display: flex;
-    flex-flow: row wrap;
-    height: 300px;
+}
+#left{
+    width: 100px;
+    height: 566px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+#left1{
+    height:64px;
+    background-image: url("image/page-logo.png");
+    background-repeat: no-repeat;
+    background-size: contain;  
+
+}
+#bluebox1{
+    display: flex;
+    flex-direction: column;
+}
+
+#icon1{
+    background-image: url("image/icons/nav-tastemakers.png");
+}
+#icon2{
+    background-image: url("image/icons/nav-blog.png");
+}
+#icon3{
+    background-image: url("image/icons/nav-alist.png")
+}
+#icon4{
+    background-image: url("image/icons/nav-contribute.png")
+}
+#icon5{
+    background-image: url("image/icons/nav-about.png")
+}
+#left2{
+    height:17px;
+    display:flex;
+    justify-content: flex-start;
+    margin: 0px 0px 10px 0px;
+    color: mediumaquamarine;
+    font-style: italic;
+}
+
+
+#graybox{
+    display: flex;
+    flex-direction: column;
+}
+
+#gray-border{
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    margin: 5px 0px 0px 0px;
+    padding: 2px 0px 0px 3px;
+}
+
+#gray-border1{
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    margin: 5px 0px 0px 0px;
+    padding: 2px 0px 10px 6px;
+}
+#icon-twitter{
+    /* width: 10px;
+    height: 10px; */
+    background-image: url("image/icons/icon-twitter.png");
+    margin: 0px 2px 0px 0px;
+}
+#icon-facebook{
+    /* width: 7px;
+    height: 7px; */
+    background-image: url("image/icons/icon-facebook.png");
+    margin: 0px 5px 0px 0px;
+}
+#text-box{
+    height: 25px;
+    margin: 5px 0px 0px 0px;
+}
+
+#left4{
+    height:50px;
+
+}
+#middle{
+    width: 495px;
+    height:566px;
+    display: flex;
+    flex-direction: column;
+}
+
+#greenbox{
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box; 
+    width: 480px;
+    height: 238px;
+    background-image: url("image/header.jpg");
+    margin:0.5px;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 0px 0px 37px 0px;
+    background-repeat: no-repeat;
+    background-size: contain; 
+}
+
+
+#whitebox{
+    width: 113px;
+    height:26px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items:center
+}
+
+#text-of-white-box{
+    font-size: 12px;
+}
+#text-of-black-box{
+    color: white;
+    font-size: 8px;
+}
+
+#blackbox{
+    width:208px;
+    height:22px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items:center
+
+}
+
+#greenbox-4 {
+    width:119px;
+    height:45px;
+    background-color: #EFF8F6;
+    color: white;
+    margin:0.5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+
+}
+#greenbox-4:hover{
+    background-color: #D7F0EB;
+    color: white;
+}
+#blue-red{
+    margin: 18px 0.5px;
+    width: 480px;
+    border: 0.5px #ccc;
+    border-style: dashed none dashed none;
+}
+
+#bluebox2{
+    width: 284px;
+    height:30px;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+
+}
+#icon-gmail{
+    background-image: url("image/icons/nav-blog.png");
+    margin: 0px 5px 0px 5px;
+}
+#redbox{
+    width: 195px;
+    height:30px;
+    display: flex;
+    justify-content: space-around;
+    align-items:center ;
+
+}
+#email-input{
+    width: 125px;
+    height:13px;
+    border: 0.5px solid #ccc;
+    border-style: inset;
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box; 
+    padding: 2px 0px 0px 2px;
+
+}
+#submit-button{
+    background-repeat:	no-repeat;
+	width:	50px;
+    height: 13px;
+    border: 0.5px solid #ccc;
+    border-radius: 2px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#green-ora{
+    flex-direction: column;
+    margin: 0px 16px 0px 0px;
+}
+
+#lightgreenbox{
+    width:108px;
+    height:75px;
+    margin:0px 0px 5px 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.5px solid #ccc;
+
+}
+
+#img-cookbooks{
+    width:99px;
+    height:65px;
+    background-image: url("image/cookbooks-blog.jpg");
+    background-repeat: no-repeat;
+    background-size: contain; 
+    
+}
+#potato{
+    width:99px;
+    height:65px;
+    background-image: url("image/potato.jpg");
+    background-repeat: no-repeat;
+    background-size: contain; 
+
+}
+#pinterest{
+    width:99px;
+    height:65px;
+    background-image: url("image/pinterest.jpg");
+    background-repeat: no-repeat;
+    background-size: contain; 
+
+}
+#dinner-blog{
+    width:99px;
+    height:65px;
+    background-image: url("image/dinner-blog.jpg");
+    background-repeat: no-repeat;
+    background-size: contain; 
+}
+#orangebox{
+    width:108px;
+    height:134px;
+}
+
+#footer{
+    width: 580px;
+    height:49px;
+    margin: 19px 0px;
+    border: 1px lightgray;
+    border-style: solid none none none;
+    display: flex;
+    align-items: center;
+
+}
+#footer-text{
+    width: 290px;
+
+}
+#icon{
+    width: 300px;
+    height:49px;
+    display: flex;
     align-items: center;
     justify-content: flex-end;
-}
 
-.bg-green{
-    background-color: lightgreen;
 }
-
-.w-50px{
-    width: 50px;
+#icon-rss{
+    background-image: url("image/icons/icon-rss.png")
 }
-
-.h-50px{
-    height: 50px;
+/* other */
+.d-inline-block{
+    display: inline-block;
 }
-
-.m-10px{
-    margin: 10px;
+.flex-display{
+    display:flex;
+}
+.text-10px{
+    font-size: 10px;
+}
+.text-7px{
+    font-size: 7px;
+}
+.text-6px{
+    font-size: 6px;
+}
+.text-8px{
+    font-size: 8px;
+}
+.icon{
+    height:17px;
+    width:17px;
+    background-repeat: no-repeat;
+    background-size: contain; 
+    margin: 0px 5px 0px 0px;
+}
+.icon-smaller{
+    height:10px;
+    width:10px;
+    background-repeat: no-repeat;
+    background-size: contain; 
+}
+.icon-smaller7{
+    height:7px;
+    width:7px;
+    background-repeat: no-repeat;
+    background-size: contain; 
+}
+.flex-column{
+    flex-direction: column;
+}
+.horizontal_dotted_line{
+    border-bottom: 0.5px dashed lightgray;
+}
+.text-green{
+    color: mediumaquamarine; 
+}
+.text-italic{
+    font-style: italic;
+}
+.text-gray{
+    color: gray;
+}
+.padding-5px{
+    padding: 5px 0px 5px 0px;
 }

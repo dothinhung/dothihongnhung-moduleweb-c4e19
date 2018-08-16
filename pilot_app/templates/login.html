@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
+    {% include 'meta-data.html'%}
 </head>
 <body>
-    <h1>Login Page</h1>
+    <!-- <h1>Login Page</h1>
 
     <form method="post">
         <label>Username</label>
@@ -23,6 +24,10 @@
         <input type="submit" value="Login">
         <br>
     </form>
-    <a href="{{url_for('sign_in')}}">Create Account</a>
+    <a href="{{url_for('sign_in')}}">Create Account</a> -->
+    {% include 'homepage/navigation.html'%}
+    {% include 'loginpage/login_1.html'%}
+    {% include 'searchpage/footer.html'%}
+
 </body>
 </html>

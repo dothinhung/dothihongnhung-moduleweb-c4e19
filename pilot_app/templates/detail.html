@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
+    {% include 'metadata.html%}
 </head>
 <body>
-    <h1>Detail Page</h1>
+    <!-- <h1>Detail Page</h1>
     <img src="{{service.image}}" width="200" height="200">
     <br>
     <b>Name : {{service.name}}</b>
@@ -22,6 +23,8 @@
     <p>Measurement : {{service.measurements[0]}} -  {{ service.measurements[1]}} -  {{ service.measurements[2]}}</p>
     <a href="{{url_for('order', service_id=service.id)}}">Yêu cầu dịch vụ</a>
     <br>
-    <a href="{{url_for('logout')}}">Logout</a>
+    <a href="{{url_for('logout')}}">Logout</a> -->
+
+    {% include 'detailpage/navigation.html'%}
 </body>
 </html>
